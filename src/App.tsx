@@ -8,6 +8,7 @@ import Pengelola from './page/dashboard/Pengelola'
 function App() {
   return (
     <>
+    <div className='w-screen overflow-x-hidden relative min-h-screen h-min'>
         <Navbar />
         <div className='absolute top-0 -left-7 z-12 rotate-6'>
           <img src="daun.gif" width={600} alt="" />
@@ -22,6 +23,7 @@ function App() {
           <div className='backgroundTile w-screen h-full absolute top-0 bottom-0 left-0 right-0 z-1'></div>
         </main>
         <Footer />
+    </div>
     </>
   )
 }
