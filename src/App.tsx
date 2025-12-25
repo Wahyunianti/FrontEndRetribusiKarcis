@@ -1,5 +1,5 @@
 import Navbar from './page/layout/Navbar'
-// import Footer from './page/layout/Footer'
+import Footer from './page/layout/Footer'
 import Home from './page/dashboard/Home'
 import JenisKarcis from './page/dashboard/JenisKarcis'
 import Retribusi from './page/dashboard/Retribusi'
@@ -21,7 +21,7 @@ function App() {
           </div>
           <div className='backgroundTile w-screen h-full absolute top-0 bottom-0 left-0 right-0 z-1'></div>
         </main>
-        {/* <Footer /> */}
+        <Footer />
     </>
   )
 }
