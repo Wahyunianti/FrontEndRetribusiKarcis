@@ -8,7 +8,7 @@ import Pengelola from './page/dashboard/Pengelola'
 function App() {
   return (
     <>
-    <div className='w-screen backgroundTile overflow-x-hidden relative min-h-screen h-min'>
+      <div className='w-screen backgroundTile overflow-x-hidden relative min-h-screen h-min'>
         <Navbar />
         <div className='absolute top-0 -left-7 z-12 rotate-6'>
           <img src="daun.gif" width={600} alt="" />
@@ -20,9 +20,9 @@ function App() {
             <Retribusi />
             <Pengelola />
           </div>
-</main>
+        </main>
         <Footer />
-    </div>
+      </div>
     </>
   )
 }

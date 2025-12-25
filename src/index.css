@@ -22,7 +22,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('tile-bg.png');
+  background-image: url('/tile-bg.png');
   background-repeat: repeat;
   background-size: 300px;
   opacity: 0.4;
