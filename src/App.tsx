@@ -8,20 +8,19 @@ import Pengelola from './page/dashboard/Pengelola'
 function App() {
   return (
     <>
-    <div className='w-screen overflow-x-hidden relative min-h-screen h-min'>
+    <div className='w-screen backgroundTile overflow-x-hidden relative min-h-screen h-min'>
         <Navbar />
         <div className='absolute top-0 -left-7 z-12 rotate-6'>
           <img src="daun.gif" width={600} alt="" />
         </div>
-        <main className='min-h-screen h-min pt-20 w-screen bg-linear-to-br from-white to-lime-100 relative'>
+        <main className='min-h-screen h-min pt-20 w-screen relative'>
           <div className='w-full h-min p-10 z-20 relative'>
             <Home />
             <JenisKarcis />
             <Retribusi />
             <Pengelola />
           </div>
-          <div className='backgroundTile w-screen h-full absolute top-0 bottom-0 left-0 right-0 z-1'></div>
-        </main>
+</main>
         <Footer />
     </div>
     </>
