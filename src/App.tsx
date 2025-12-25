@@ -1,5 +1,5 @@
 import Navbar from './page/layout/Navbar'
-import Footer from './page/layout/Footer'
+// import Footer from './page/layout/Footer'
 import Home from './page/dashboard/Home'
 import JenisKarcis from './page/dashboard/JenisKarcis'
 import Retribusi from './page/dashboard/Retribusi'
