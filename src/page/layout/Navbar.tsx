@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
     }]
 
     return (
-        <nav className="w-full">
+        <nav className="w-screen">
             <div className='relative'>
                 <div className='w-full h-20 fixed z-50 bg-white border-b border-slate-200 shadow-md flex flex-row px-7 sm:px-10'>
                     <div className='w-1/2'>
