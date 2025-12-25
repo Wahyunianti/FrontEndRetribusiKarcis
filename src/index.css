@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundTile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('tile-bg.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.kOdnNV::-webkit-scrollbar {
+  display: none;
+}
+
+.kOdnNV {
+  scrollbar-width: none;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+th {
+  font-size: 18px;
+}
+
+p,
+a, td, th, input {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  @apply text-lg sm:text-xl;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.linkFile:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.linkFile span{
+  overflow: hidden;
+  display: none;
+  width: 1.2em;
+}
+
+.linkFile:hover span{
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
