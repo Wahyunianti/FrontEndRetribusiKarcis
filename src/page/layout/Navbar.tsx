@@ -7,18 +7,18 @@ export const Navbar: React.FC = () => {
     const itemsNavbar = [{
         key: "Home",
         url: "#home"
-    },{
+    }, {
         key: "Jenis Karcis",
         url: "#karcis"
-    },{
+    }, {
         key: "Retribusi",
         url: "#retribusi"
-    },{
+    }, {
         key: "Pengelola",
         url: "#pengelola"
-    },{
+    }, {
         key: "Login",
-        url: "#menu_login"
+        url: "/login"
     }]
 
     return (
@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
                         <div className='h-full w-min flex flex-row items-center gap-3'>
                             <ul className='hidden sm:flex flex-row gap-5 h-full justify-center items-center'>
                                 {itemsNavbar.map((item) => (
-                                        <a key={item.key} href={item.url} className='text-xl font-bold w-max transition-all hover:bg-lime-100 p-2 hover:rounded-md hover:text-lime-800'>{item.key}</a>
+                                    <a key={item.key} href={item.url} className='text-xl font-bold w-max transition-all hover:bg-lime-100 p-2 hover:rounded-md hover:text-lime-800'>{item.key}</a>
                                 ))}
                             </ul>
                             <GiHamburgerMenu className='cursor-pointer block sm:hidden' onClick={() => setIsMobile(!isMobile)} size={25} />
@@ -45,12 +45,11 @@ export const Navbar: React.FC = () => {
                 <div className={`w-full sm:hidden overflow-hidden bg-white shadow-md fixed top-20 left-0 z-40 transition-all ${isMobile ? 'h-70 border-b' : 'h-0'}`}>
                     <ul className='flex flex-col items-center gap-4 h-min p-3 pt-5'>
                         {itemsNavbar.map((item) => (
-                                <a key={item.key} href={item.url} onClick={() => setIsMobile(!isMobile)} className='text-xl size-full p-1 font-bold cursor-pointer text-center transition-all hover:bg-lime-50'>{item.key}</a>
+                            <a key={item.key} href={item.url} onClick={() => setIsMobile(!isMobile)} className='text-xl size-full p-1 font-bold cursor-pointer text-center transition-all hover:bg-lime-50'>{item.key}</a>
                         ))}
                     </ul>
                 </div>
             </div>
-
         </nav>
     );
 };

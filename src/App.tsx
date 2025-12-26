@@ -1,28 +1,16 @@
-import Navbar from './page/layout/Navbar'
-import Footer from './page/layout/Footer'
-import Home from './page/dashboard/Home'
-import JenisKarcis from './page/dashboard/JenisKarcis'
-import Retribusi from './page/dashboard/Retribusi'
-import Pengelola from './page/dashboard/Pengelola'
+import { Routes, Route } from "react-router-dom"
+import DashboardPage from "./page/dashboard/DashboardPage"
+import LoginPage from "./page/login/LoginPage"
+import NotFoundPage from "./page/emptystate/NotFoundPage"
 
 function App() {
   return (
     <>
-      <div className='w-screen backgroundTile overflow-x-hidden relative min-h-screen h-min'>
-        <Navbar />
-        <div className='absolute top-0 -left-7 z-12 rotate-6'>
-          <img src="daun.gif" width={600} alt="" />
-        </div>
-        <main className='min-h-screen h-min pt-20 w-screen relative'>
-          <div className='w-full h-min p-10 z-20 relative'>
-            <Home />
-            <JenisKarcis />
-            <Retribusi />
-            <Pengelola />
-          </div>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   )
 }

@@ -25,23 +25,32 @@ const SelectComponent: React.FC<MonthSelectProps> = ({
       placeholder={placeholder}
       className={className}
       styles={{
-       control: (provided) => ({
-    ...provided,
-    borderColor: '#65a30d',
-    boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
-    fontSize: '14px',
-    '&:hover': {
-      borderColor: '#65a30d',
-      cursor: 'pointer',
-    },
-  }),
-        option: (provided, state) => ({
+        control: (provided) => ({
           ...provided,
-          backgroundColor: state.isSelected ? '#65a30d' : state.isFocused ? '#d9f99d' : 'white',
-          color: state.isSelected ? 'white' : 'black',
-           '&:hover': {
+          borderColor: '#65a30d',
+          boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+          fontSize: '14px',
+          '&:hover': {
+            borderColor: '#65a30d',
             cursor: 'pointer',
           },
+        }),
+        menu: (provided) => ({
+          ...provided,
+          animation: 'fadeScaleIn 150ms ease-out',
+          transformOrigin: 'top',
+        }),
+
+        option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isSelected
+            ? '#65a30d'
+            : state.isFocused
+              ? '#d9f99d'
+              : 'white',
+          color: state.isSelected ? 'white' : 'black',
+          transition: 'background-color 120ms ease',
+          cursor: 'pointer',
         }),
       }}
     />

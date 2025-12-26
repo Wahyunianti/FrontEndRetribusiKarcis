@@ -1,7 +1,10 @@
 import Card from '../components/Card';
 import ImageCard from '../components/ImageCard';
+import { useNavigation } from '../../hooks/useNavigation';
 
 export default function Home() {
+    const { goTo } = useNavigation();
+    
     return (
         <section id='home' className="sm:p-8">
             <div className="relative flex flex-col-reverse sm:flex-row gap-6">
@@ -14,7 +17,7 @@ SIKARCIS berfungsi sebagai media pendataan dan pengendalian retribusi yang memun
                         extraText='SISTEM INFORMASI RETRIBUSI KARCIS DINAS LINGKUNGAN HIDUP KOTA CILEGON'
                     />
                     <div className='relative transition-all duration-300 ease-in-out 
-  transform hover:scale-105 active:scale-95 cursor-pointer' onClick={() => window.location.href = '#menu_login'}>
+  transform hover:scale-105 active:scale-95 cursor-pointer' onClick={() => goTo('/login')}>
                         <img className='drop-shadow-2xl' src="button-medieval.png" width={300} alt="" />
                         <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
                             <span className="text-yellow-100 font-bold text-lg drop-shadow-xl">
