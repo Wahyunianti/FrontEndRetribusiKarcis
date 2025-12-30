@@ -13,7 +13,7 @@ interface Karcis {
 
 export default function JenisKarcis() {
     const dispatch = useDispatch<AppDispatch>();
-    const { data, loading, error } = useSelector((state: RootState) => state.jenisKarcis);
+    const { data, loading } = useSelector((state: RootState) => state.jenisKarcis);
 
     useEffect(() => {
         dispatch(fetchJenisKarcis());

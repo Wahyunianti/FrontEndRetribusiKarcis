@@ -5,7 +5,7 @@ import Modal from './Modal';
 
 export default function GlobalErrorModal() {
     const dispatch = useDispatch();
-    const { open, message, status } = useSelector(
+    const { open, message } = useSelector(
         (state: RootState) => state.globalError
     );
 
