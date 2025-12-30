@@ -18,7 +18,7 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
     columns,
     data,
     pagination = true,
-    paginationPerPage = 5,
+    paginationPerPage = 10,
     highlightOnHover = true,
     striped = true,
     responsive = true,
@@ -108,6 +108,11 @@ const DataTableComponent: React.FC<DataTableComponentProps> = ({
             subHeader={searchable}
             subHeaderComponent={subHeaderComponent}
             customStyles={customStyles}
+            noDataComponent={
+                <div className="py-6 text-center text-gray-500 text-sm">
+                    Tidak ada data untuk ditampilkan..
+                </div>
+            }
         />
     );
 };
