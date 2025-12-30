@@ -160,12 +160,12 @@ export default function Retribusi() {
                 <div className='flex flex-row gap-2 items-center justify-between sm:justify-end'>
                     <Button
                         title="Reset Filter"
-                        className='bg-red-600 hover:bg-red-700'
+                        className='btnDanger'
                         imageSrc={<GrPowerReset />}
                     />
                     <Button
                         title="Print Laporan"
-                        className='bg-lime-700 hover:bg-lime-800'
+                        className='btnPrimary'
                         imageSrc={<FaFileExcel />}
                     />
                 </div>

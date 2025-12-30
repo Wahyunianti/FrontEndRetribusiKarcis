@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .backgroundTile::before {
   content: '';
   position: absolute;
@@ -54,16 +58,19 @@ th {
 }
 
 p,
-a, td, th, input {
+a,
+td,
+th,
+input {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 a {
+  @apply text-lg sm:text-xl;
   font-weight: 500;
   text-decoration: none;
-  @apply text-lg sm:text-xl;
 }
 
 a:hover {
@@ -122,13 +129,13 @@ h3 {
   cursor: pointer;
 }
 
-.linkFile span{
+.linkFile span {
   overflow: hidden;
   display: none;
   width: 1.2em;
 }
 
-.linkFile:hover span{
+.linkFile:hover span {
   display: inline-block;
   transition: transform 0.3s ease;
 }
@@ -137,6 +144,7 @@ h3 {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -147,8 +155,70 @@ h3 {
     opacity: 0;
     transform: scale(0.95) translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+
+.modalPopupAction {
+  @apply w-screen h-screen;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(109, 120, 143, 0.192);
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 100;
+}
+
+.showModal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hideModal {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.isiModalsTambah {
+  position: fixed;
+  height: min-content;
+  margin-inline: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  z-index: 200;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.btnBlack {
+  @apply bg-gray-800 hover:bg-gray-900 text-white;
+}
+
+.btnPrimary {
+  @apply bg-lime-700 hover:bg-lime-800 text-white;
+}
+
+.btnDanger {
+  @apply bg-red-600 hover:bg-red-700 text-white;
 }

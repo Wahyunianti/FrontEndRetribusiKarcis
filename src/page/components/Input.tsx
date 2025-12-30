@@ -2,13 +2,18 @@ import React from 'react';
 
 interface InputProps {
     placeholder: string;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    type?: string;
 }
 
-const Input: React.FC<InputProps> = ({ placeholder }) => {
+const Input: React.FC<InputProps> = ({ placeholder, value, onChange, type }) => {
     return (
         <input
-            type="text"
+            type={type || "text"}
             placeholder={placeholder}
+            value={value}
+            onChange={onChange}
             className="
       w-full rounded-md border border-gray-200
       bg-white px-4 py-2 sm:py-3

@@ -22,8 +22,8 @@ export const Navbar: React.FC = () => {
     }]
 
     return (
-        <nav className="w-screen overflow-x-hidden">
-            <div className='relative'>
+        <nav className="w-screen relative overflow-x-hidden">
+            <div className='relative h-min w-full'>
                 <div className='w-full h-20 fixed z-50 bg-white border-b border-slate-200 shadow-md flex flex-row px-7 sm:px-10'>
                     <div className='w-1/2'>
                         <div className='flex flex-row gap-4 h-full items-center'>
@@ -48,7 +48,12 @@ export const Navbar: React.FC = () => {
                             <a key={item.key} href={item.url} onClick={() => setIsMobile(!isMobile)} className='text-xl size-full p-1 font-bold cursor-pointer text-center transition-all hover:bg-lime-50'>{item.key}</a>
                         ))}
                     </ul>
+
                 </div>
+
+            </div>
+            <div onClick={() => setIsMobile(!isMobile)} className={`fixed ${isMobile ? 'block' : 'hidden'} inset-0 h-full z-30 w-full bg-transparent`}>
+
             </div>
         </nav>
     );
