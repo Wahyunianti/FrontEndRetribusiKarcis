@@ -86,7 +86,7 @@ function DashboardManage() {
         <>
             <div className="w-screen backgroundTile overflow-hidden relative min-h-screen">
                 <div className='h-14 w-full fixed bg-lime-200 z-100 drop-shadow-xl drop-shadow-lime-600/50 flex xl:hidden items-center px-5 lg:px-10'>
-                    <h3 onClick={() => setOpenModal(true)} className='cursor-pointer' style={{fontSize : '24px'}}>LOGOUT</h3>
+                    <h3 onClick={() => setOpenModal(true)} className='cursor-pointer text-lime-600 drop-shadow-xl' style={{fontSize : '24px'}}>LOGOUT</h3>
                 </div>
                 <div className='w-full h-full mt-14 xl:mt-0 flex flex-row'>
 
