@@ -287,7 +287,7 @@ export default function DataTransaksi() {
                 open={openModal}
                 onClose={() => setOpenModal(false)}
                 onSubmit={handleSubmit}
-                isFormValid={!!selectedWajibRetribusiId && !!bukti}
+                isFormValid={!!selectedWajibRetribusiId}
                 isTransaction={true}
                 title={'Tambah Transaksi'}
                 submitText={'Simpan'}
