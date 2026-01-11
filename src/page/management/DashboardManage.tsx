@@ -165,7 +165,7 @@ function DashboardManage() {
                         </div>
                     </div>
                     <div className={`${open ? 'w-full xl:w-[84%]' : 'w-full xl:w-[96%] lg:pl-24'} min-h-screen fixed right-0 h-full z-1 overflow-y-auto transition-all duration-300 ease-in-out py-10 px-5 lg:px-10`}>
-                        <div className='w-full min-h-screen h-min pb-30 relative'>
+                        <div className='w-full min-h-screen h-min mb-20 relative'>
                             <Outlet />
                         </div>
                     </div>
