@@ -20,7 +20,6 @@ import { FaTrashAlt } from "react-icons/fa";
 import { ENV } from "../../config/env";
 import { GrPowerReset } from "react-icons/gr";
 import { useRef } from 'react';
-import ModalImage from 'react-modal-image';
 
 interface Zona {
     id: string;
