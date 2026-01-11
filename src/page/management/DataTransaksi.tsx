@@ -222,7 +222,7 @@ export default function DataTransaksi() {
                                     <div className="flex flex-col gap-1"> <p className="text-lime-800 text-sm font-bold">{item.wajib_retribusi?.name}</p>
                                         <p className="text-lime-800 text-sm font-bold">Jenis karcis : {item.wajib_retribusi?.jenis_karcis?.name}</p>
                                         <p className="text-lime-800 text-sm font-bold">Nominal : Rp. {Number(item.wajib_retribusi?.jenis_karcis?.nominal).toLocaleString()}</p>
-                                        <p className="text-lime-800 text-sm font-bold">Total : Rp. {Number(item.wajib_retribusi?.jenis_karcis?.nominal).toLocaleString()}</p>
+                                        {/* <p className="text-lime-800 text-sm font-bold">Total : Rp. {Number(item.wajib_retribusi?.jenis_karcis?.nominal).toLocaleString()}</p> */}
                                     </div> </div>
                                 <div className="flex flex-row justify-between">
                                     <FaTrashAlt onClick={() => { setSelectedData(item); setOpenModalDelete(true) }} size={20} className="text-red-600 cursor-pointer" />
