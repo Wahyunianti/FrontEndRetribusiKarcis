@@ -15,16 +15,16 @@ export default function GlobalErrorModal() {
 
     return (
         <>
-            {open &&
-                <Modal
-                    title="Terjadi Kesalahan"
-                    text={message}
-                    action={true}
-                    onConfirm={() => dispatch(closeError())}
-                    buttonText='Oke'
-                    className='btnDanger'
-                />
-            }
+            <Modal
+                open={open}
+                title="Terjadi Kesalahan"
+                text={message}
+                action={true}
+                onConfirm={() => dispatch(closeError())}
+                closeModal={() => dispatch(closeError())}
+                buttonText='Oke'
+                className='btnDanger'
+            />
         </>
 
     );

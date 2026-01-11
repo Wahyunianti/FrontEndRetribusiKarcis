@@ -157,7 +157,7 @@ export default function Retribusi() {
                     <h2 className="text-2xl font-bold mb-4">Retribusi</h2>
                     <img src="daun2.gif" className='mb-4 rotate-45' width={40} alt="" />
                 </div>
-                <div className='flex flex-row gap-2 items-center justify-between sm:justify-end'>
+                <div className='flex flex-col xl:flex-row gap-2 xl:items-center justify-between sm:justify-end'>
                     <Button
                         title="Reset Filter"
                         className='btnDanger'
@@ -242,7 +242,7 @@ export default function Retribusi() {
                     columns={columns}
                     data={retribusiData}
                     pagination
-                    paginationPerPage={5}
+                    paginationPerPage={10}
                     highlightOnHover
                     striped
                     responsive

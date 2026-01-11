@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Changa+One:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Changa+One:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -41,8 +43,23 @@ html {
   scrollbar-width: none;
 }
 
+.modals::-webkit-scrollbar {
+  display: none;
+}
+
+.modals {
+  scrollbar-width: none;
+}
+
 section {
   margin-bottom: 3rem;
+}
+
+.changa {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h1,
@@ -173,7 +190,7 @@ h3 {
   pointer-events: none;
   backdrop-filter: blur(5px);
   transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
-  z-index: 100;
+  z-index: 999;
 }
 
 .showModal {
@@ -188,7 +205,6 @@ h3 {
 
 .isiModalsTambah {
   position: fixed;
-  height: min-content;
   margin-inline: 1rem;
   border-radius: 10px;
   background-color: white;
@@ -221,4 +237,146 @@ h3 {
 
 .btnDanger {
   @apply bg-red-600 hover:bg-red-700 text-white;
+}
+
+.react-select__control {
+  border-radius: 0.375rem;
+  border-color: #d1d5db;
+  min-height: 38px;
+}
+.react-select__control--is-focused {
+  border-color: #84cc16;
+  box-shadow: none;
+}
+.react-select__option--is-selected {
+  background-color: #84cc16;
+}
+
+
+.navbar-mobile {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    height: 85px;
+    width: 100%;
+    border-top: 9px solid white;
+    background-color: #defaa2;
+    z-index: 1;
+    place-items: center;
+}
+
+.navbar-mobile ul {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 320px;
+}
+.navbar-mobile ul li{
+    height: 100%;
+    z-index: 100;
+}
+.navbar-mobile ul li a{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 65px;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #000000;
+}
+
+.navbar-mobile ul li a .icon {
+    position: relative;
+    display: block;
+    transition: 0.5s;
+}
+
+.navbar-mobile ul li.active a .icon {
+    transform: translateY(-22px);
+    fill: #f6f3e8;
+}
+
+.navbar-mobile ul li.active a .icon svg path{
+    fill: #f6f3e8;
+}
+
+.navbar-mobile ul li a .text {
+    position: absolute;
+    bottom: 13px;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navbar-mobile ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -32%;
+    transform: translateX(-50%);
+    width: 80px;
+    left: -10px;
+    height: 80px;
+    background: #000000;
+    border-radius: 50%;
+    border: 6px solid white;
+    transition: 0.5s;
+    z-index: 90;
+    margin: auto;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 27%;
+    left: -22px;
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    border-top-right-radius: 30px;
+    box-shadow: 1px -9px 0 0 #ffffff;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 27%;
+    right: -22px;
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -1px -9px 0 0 white;
+}
+
+
+.navbar-mobile ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(65px * 0));
+}
+
+.navbar-mobile ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(65px * 1));
+}
+
+.navbar-mobile ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(65px * 2));
+}
+
+.navbar-mobile ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(65px * 3));
+}
+
+.navbar-mobile ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(65px * 4));
 }

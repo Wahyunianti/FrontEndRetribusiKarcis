@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { JenisKarcisService } from '../services/jenisKarcisService';
+import { JenisKarcisService } from '../services/apiService';
 
 export interface JenisKarcis {
   id: number;
   name: string;
+  jumlah: number;
   nominal: number;
+  nomor_seri: string;
+  total_lembar: number
 }
 
 interface JenisKarcisState {

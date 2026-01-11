@@ -4,8 +4,9 @@ import Button from './Button';
 
 interface ModalProps {
     title: string;
+    open: boolean;
     text?: string;
-    closeModal?: () => void;
+    closeModal: () => void;
     onConfirm?: () => void;
     onDismiss?: boolean;
     action?: boolean;
@@ -13,31 +14,34 @@ interface ModalProps {
     className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ title, text, closeModal, onConfirm, onDismiss, buttonText, action, className }) => {
+const Modal: React.FC<ModalProps> = ({ title, text,open, closeModal, onConfirm, onDismiss, buttonText, action, className }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        setIsVisible(true);
-    }, []);
+        if (open) setIsVisible(true);
+    }, [open]);
 
     const handleClose = () => {
-        setTimeout(() => setIsVisible(false), 300);
+        setIsVisible(false);
+        setTimeout(closeModal, 300);
     };
 
     const handleConfirm = () => {
         setTimeout(() => setIsVisible(false), 300);
     };
 
+    if (!open) return null;
+
     return (
         <div
             className={`modalPopupAction ${isVisible ? 'showModal' : 'hideModal'}`}>
-            <div className={`isiModalsTambah p-5 sm:min-w-1/4 ${isVisible ? 'show' : 'hide'}`}>
+            <div className={`isiModalsTambah p-5 sm:min-w-1/4 lg:max-w-1/4 ${isVisible ? 'show' : 'hide'}`}>
                 <div className='w-full flex flex-row border-b justify-center items-center'>
                     <h2>{title}</h2>
                 </div>
                 <div className='flex flex-col gap-3 p-6 w-full min-h-32 items-center'>
                     {text && (
-                        <p>{text}</p>
+                        <p className='text-center'>{text}</p>
                     )}
                 </div>
                 {action &&
