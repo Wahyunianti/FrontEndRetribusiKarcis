@@ -41,11 +41,7 @@ export default function DataZona() {
         : [];
 
     const columns = [
-        {
-            name: 'ID',
-            selector: (row: Zona) => row.id,
-            width: '80px',
-        },
+        { name: 'ID', cell: (_row: any, index: number) => index + 1, width: '80px' },
         {
             name: 'Nama Zona',
             selector: (row: Zona) => row.name,
