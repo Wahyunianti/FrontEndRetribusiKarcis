@@ -247,7 +247,7 @@ export default function DataTransaksi() {
 
                 </div>
                 <div
-                    className="h-min fixed bg-white drop-shadow-2xl drop-shadow-lime-700/50 flex xl:absolute bottom-20 inset-x-7 px-7 rounded-4xl xl:hidden"
+                    className="h-min fixed bg-white drop-shadow-2xl drop-shadow-lime-700/50 flex xl:absolute bottom-20 inset-x-7 px-7 pb-4 rounded-4xl xl:hidden"
                 >
                     <Button
                         title="Tambah Transaksi"
