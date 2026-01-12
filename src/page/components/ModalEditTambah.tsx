@@ -162,7 +162,7 @@ const ModalEditTambah: React.FC<ModalEditTambahProps> = ({
 
     return (
         <div className={`modalPopupAction z-9999 ${isVisible ? 'showModal' : 'hideModal'}`}>
-            <div className={`isiModalsTambah h-min max-h-3/4 modals overflow-y-auto p-5 w-[90%] xl:w-1/3 ${isVisible ? 'show' : 'hide'}`}>
+            <div className={`isiModalsTambah h-min max-h-3/4 modals overflow-y-auto p-5 m-5 w-[90%] xl:w-1/3 ${isVisible ? 'show' : 'hide'}`}>
 
                 <div className="w-full flex border-b justify-center pb-3">
                     <h2 className="text-lg font-bold">{title}</h2>
